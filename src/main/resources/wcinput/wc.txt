@@ -1,0 +1,5 @@
+hadoop mapreduce yarn
+hdfs hadoop mapreduce
+mapreduce yarn lagou
+lagou
+lagou

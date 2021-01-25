@@ -1,0 +1,44 @@
+<configuration>
+
+    <!-- 指定Hadoop辅助名称节点主机配置 -->
+    <property>
+        <name>dfs.namenode.secondary.http-address</name>
+        <value>linux123:50090</value>
+    </property>
+
+    <!-- 如果是通过公网IP访问阿里云上内网搭建的集群 -->
+    <property>
+        <name>dfs.client.use.datanode.hostname</name>
+        <value>true</value>
+        <description>only config in clients</description>
+    </property>
+
+    <!-- 副本数量 -->
+    <property>
+        <name>dfs.replication</name>
+        <value>3</value>
+    </property>
+
+    <property>
+        <name>dfs.permissions.enabled</name>
+        <value>false</value>
+    </property>
+
+    <!-- HiveServer2 连不上10000;启用 webhdfs 服务 -->
+    <property>
+        <name>dfs.webhdfs.enabled</name>
+        <value>true</value>
+    </property>
+
+    <!-- HUE -->
+    <property>
+        <name>dfs.webhdfs.enabled</name>
+        <value>true</value>
+    </property>
+
+    <property>
+        <name>dfs.permissions.enabled</name>
+        <value>false</value>
+    </property>
+
+</configuration>

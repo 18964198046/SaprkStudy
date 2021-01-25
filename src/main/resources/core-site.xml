@@ -1,0 +1,58 @@
+<configuration>
+
+    <!-- 指定HDFS中NameNode的地址 -->
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://linux121:9000</value>
+    </property>
+
+    <!-- 指定Hadoop运⾏行行时产⽣生⽂文件的存储⽬目录 -->
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>/opt/lagou/servers/hadoop-2.9.2/data/tmp</value>
+    </property>
+
+    <!-- HiveServer2 连不上10000;hadoop为安装用户 -->
+    <!-- root用户可以代理所有主机上的所有用户 -->
+    <property>
+        <name>hadoop.proxyuser.root.hosts</name>
+        <value>*</value>
+    </property>
+
+    <property>
+        <name>hadoop.proxyuser.root.groups</name>
+        <value>*</value>
+    </property>
+
+    <property>
+        <name>hadoop.proxyuser.hadoop.hosts</name>
+        <value>*</value>
+    </property>
+
+    <property>
+        <name>hadoop.proxyuser.hadoop.groups</name>
+        <value>*</value>
+    </property>
+
+    <!-- HUE -->
+    <property>
+        <name>hadoop.proxyuser.hue.hosts</name>
+        <value>*</value>
+    </property>
+
+    <property>
+        <name>hadoop.proxyuser.hue.groups</name>
+        <value>*</value>
+    </property>
+
+    <property>
+        <name>hadoop.proxyuser.hdfs.hosts</name>
+        <value>*</value>
+    </property>
+
+    <property>
+        <name>hadoop.proxyuser.hdfs.groups</name>
+        <value>*</value>
+    </property>
+
+</configuration>
