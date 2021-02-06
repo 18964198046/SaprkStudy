@@ -1,13 +1,13 @@
-package cn.lagou.question
+package cn.lagou.sparkwork.module3.question1
 
 import java.util.Properties
 
 import org.apache.kafka.clients.consumer.ConsumerConfig
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerConfig, ProducerRecord}
 import org.apache.kafka.common.serialization.{LongSerializer, StringDeserializer, StringSerializer}
+import org.apache.spark.SparkConf
 import org.apache.spark.streaming.kafka010.{ConsumerStrategies, KafkaUtils, LocationStrategies}
 import org.apache.spark.streaming.{Seconds, StreamingContext}
-import org.apache.spark.{SparkConf}
 
 import scala.collection.mutable
 import scala.io.Source
@@ -165,7 +165,6 @@ object KafkaSparkStreamQuestion {
     // readConvertedSampleLog()
 
   }
-
 
 
 }

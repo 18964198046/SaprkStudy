@@ -1,4 +1,4 @@
-package cn.lagou.sparkwork.question6
+package cn.lagou.sparkwork.module2.question6
 
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions.lead

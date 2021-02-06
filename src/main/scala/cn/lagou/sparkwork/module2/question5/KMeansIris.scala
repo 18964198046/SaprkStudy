@@ -1,4 +1,4 @@
-package cn.lagou.sparkwork.question5
+package cn.lagou.sparkwork.module2.question5
 
 import org.apache.spark.sql.{Encoders, SparkSession}
 

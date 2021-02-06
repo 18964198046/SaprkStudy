@@ -1,8 +1,8 @@
-package cn.lagou.question
+package cn.lagou.sparkwork.module3.question2
 
-import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.graphx.{Edge, Graph, VertexId}
 import org.apache.spark.rdd.RDD
+import org.apache.spark.{SparkConf, SparkContext}
 
 object AirportGraphxQuestion {
 
@@ -52,12 +52,12 @@ object AirportGraphxQuestion {
     val rawRDD: RDD[(VertexId, String, List[(VertexId, VertexId, Int)])] = sc.makeRDD(lst)
 
     // 创建边
-    val edgeRDD: RDD[Edge[Int]] = rawRDD.flatMap{ case (_, _, info) =>
-      info.map { case (srcId, dstId, attr) => Edge(srcId, dstId, attr)}
+    val edgeRDD: RDD[Edge[Int]] = rawRDD.flatMap { case (_, _, info) =>
+      info.map { case (srcId, dstId, attr) => Edge(srcId, dstId, attr) }
     }
 
     // 创建顶点
-    val vertexRDD: RDD[(VertexId, String)] = rawRDD.map{case (id, name, _) => (id, name)}
+    val vertexRDD: RDD[(VertexId, String)] = rawRDD.map { case (id, name, _) => (id, name) }
 
     // 创建图
     val graph = Graph(vertexRDD, edgeRDD);
