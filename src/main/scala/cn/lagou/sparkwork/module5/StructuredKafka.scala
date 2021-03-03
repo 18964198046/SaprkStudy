@@ -47,14 +47,17 @@ object StructuredKafka {
 
     //1 获取sparksession
     val spark: SparkSession = SparkSession.builder()
-      .master("local[*]") .appName("kafka-redis") .getOrCreate()
+      .master("local[*]")
+      .appName("kafka-redis")
+      .getOrCreate()
     val sc = spark.sparkContext
     sc.setLogLevel("WARN")
 
     //2 定义读取kafka数据源
     import spark.implicits._
     val kafkaDf: DataFrame = spark.readStream
-      .format("kafka") .option("kafka.bootstrap.servers", "hadoop4:9092")
+      .format("kafka")
+      .option("kafka.bootstrap.servers", "hadoop4:9092")
       .option("subscribe", "lagou_bus_info")
       .load()
 
